@@ -1,4 +1,9 @@
 # script for creating lifelogs from accelerometry and GPS tables
+library(RPostgreSQL)
+
+# ---> assumes "setup.R" has been modified <---
+# loads setups, including projectdir, dbname, etc.
+source("tools/setup.R")
 
 ## ---- lifelog
 # create lifelog tables by rounding the GPS data to match the accelerometry interval and join by these sets of time stamps
